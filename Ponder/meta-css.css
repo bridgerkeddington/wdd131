@@ -1,0 +1,46 @@
+/* General Body Setup */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ID Selector: Used for the main container */
+#content {
+    max-width: 600px;
+    margin: 0 auto; /* Centers the container */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center; /* Centers the text inside */
+}
+
+/* Responsive Image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ID Selector: The section holding the lists */
+#topics {
+    text-align: left; /* Realigns text to the left for reading */
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Class Selector: Used for the lists */
+.list {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.list li {
+    margin-bottom: 5px;
+}

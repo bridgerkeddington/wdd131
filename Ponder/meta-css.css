@@ -1,47 +1,67 @@
 /* Used Gemini Pro for code generation */
-/* General Body Setup */
+/* General Page Setup */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #E0E0E0; /* Light gray background */
+    font-family: 'Times New Roman', Times, serif; /* Serif font matches the target */
+    display: flex;
+    justify-content: center;
+    padding: 40px;
     margin: 0;
-    padding: 20px;
 }
 
-/* ID Selector: Used for the main container */
+/* The Main Container */
 #content {
-    max-width: 600px;
-    margin: 0 auto; /* Centers the container */
-    background-color: white;
+    max-width: 700px;
+    text-align: center; /* Centers all text */
     padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center; /* Centers the text inside */
 }
 
-/* Responsive Image */
-img {
-    max-width: 100%;
-    height: auto;
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #000;
 }
 
-/* ID Selector: The section holding the lists */
-#topics {
-    text-align: left; /* Realigns text to the left for reading */
-    margin-top: 20px;
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-}
-
-/* Class Selector: Used for the lists */
-.list {
-    color: #555;
-    font-size: 1.1rem;
+.subtitle {
+    color: #0066cc; /* The specific blue color */
+    font-size: 1.2rem;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
-.list li {
-    margin-bottom: 5px;
+/* The Blue Line */
+hr {
+    border: none;
+    height: 3px;
+    background-color: #0066cc; /* Matches the subtitle blue */
+    margin-bottom: 40px;
+    width: 80%; /* Keeps the line slightly shorter than the width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Images */
+img {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Topic Sections */
+h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif; /* The body text looks simpler */
+    line-height: 1.5;
+    margin: 5px 0;
+    color: #333;
+}
+
+.topic {
+    margin-bottom: 30px;
 }

@@ -13,7 +13,7 @@ radius = 4;
 area = radius * radius * PI;
 console.log("Area with radius 4:", area);
 
-// 3. Calculate area with radius 20 (Required by assignment)
+// 3. Calculate area with radius 20 
 radius = 20;
 area = radius * radius * PI;
 console.log("Area with radius 20:", area);

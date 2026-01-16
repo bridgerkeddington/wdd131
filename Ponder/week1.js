@@ -33,10 +33,10 @@ console.log("Type Coercion Result (Integer):", result); // Outputs 3
 
 
 // --- Exercise 3: Scope ---
-let course = "CSE131"; // Global Scope
+let course = "WDD131"; // Global Scope
 
 if (true) {
-    let student = "John"; // Block Scope
+    let student = "Bridger Keddington"; // Block Scope
     console.log("Inside block - Course:", course);
     console.log("Inside block - Student:", student);
 }

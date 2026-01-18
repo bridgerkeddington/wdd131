@@ -1,4 +1,5 @@
-<!-- Used Gemini Pro for code generation -->
+<!-- Cited: Gemini Pro 3 for code generation-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +21,31 @@
         </header>
 
         <main>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <label for="webdevlist">Choose One:</label>
+                <select name="code" id="webdevlist">
+                    <option value="">Choose One:</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </select>
+            </div>
+
             <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="HTML CSS JS logos">
             
-            <div class="topic">
+            <div id="html" class="topic">
                 <h2>HyperText Markup Language</h2>
                 <p>Defines the structure and content of a web page.</p>
                 <p>Without HTML there's nothing for the browser to display.</p>
             </div>
 
-            <div class="topic">
+            <div id="css" class="topic">
                 <h2>Cascading Style Sheets</h2>
                 <p>Controls how the HTML elements look.</p>
                 <p>Without CSS pages look plain and unstyled.</p>
             </div>
 
-            <div class="topic">
+            <div id="js" class="topic">
                 <h2>JavaScript</h2>
                 <p>Adds interactivity and dynamic behavior.</p>
                 <p>Without JavaScript nothing on the page responds dynamically to user actions.</p>

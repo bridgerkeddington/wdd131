@@ -1,12 +1,12 @@
-/* Used Gemini Pro for code generation */
-/* General Body Setup - The Background  */
+/* General Body Setup */
 body {
-    background-color: #f0f0f0; /* Light gray background like the screenshot */
-    font-family: "Georgia", Times, serif; /* Serif font for the main vibe */
+    background-color: #f0f0f0;
+    font-family: "Georgia", Times, serif;
     margin: 0;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
+    transition: background-color 0.5s ease; /* Smooth transition added */
 }
 
 /* The White Card */
@@ -14,11 +14,12 @@ body {
     background-color: white;
     max-width: 700px;
     padding: 60px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Subtle shadow to make it pop */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
+    transition: background-color 0.5s ease; /* Smooth transition added */
 }
 
-/* Typography - Headers */
+/* Typography */
 h1 {
     text-align: center;
     text-transform: uppercase;
@@ -31,13 +32,13 @@ h1 {
 h2 {
     text-align: center;
     text-transform: uppercase;
-    font-family: Arial, sans-serif; /* Sans-serif for the subheader */
+    font-family: Arial, sans-serif;
     font-size: 1rem;
-    color: #0076C6; /* BYU-Idaho Blue */
+    color: #0076C6;
     letter-spacing: 3px;
     margin-top: 0;
     margin-bottom: 40px;
-    border-bottom: 1px solid #ddd; /* The thin line under the title */
+    border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
 
@@ -45,7 +46,7 @@ h2 {
 p, li {
     font-family: "Times New Roman", Times, serif;
     font-size: 1.1rem;
-    line-height: 1.6; /* Makes it easy to read */
+    line-height: 1.6;
     color: #333;
 }
 
@@ -59,7 +60,7 @@ ol {
 }
 
 li {
-    margin-bottom: 15px; /* Spacing between list items */
+    margin-bottom: 15px;
 }
 
 /* Footer Logo */
@@ -69,6 +70,46 @@ footer {
 }
 
 footer img {
-    width: 150px; /* Controls the logo size */
+    width: 150px;
     height: auto;
+}
+
+#theme-select {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* --- DARK MODE LOGIC --- */
+
+/* Applied to body */
+body.dark {
+    background-color: #222; /* Darker background for the outside */
+    color: white;
+}
+
+/* FIX: Logic to turn the content box dark too */
+body.dark .content-box {
+    background-color: #333; /* The Rubric-required dark gray */
+    border-color: #444;
+}
+
+
+body.dark h1, 
+body.dark p, 
+body.dark li {
+    color: white;
+}
+
+/* Ensure blue accents stay visible */
+body.dark h2, body.dark h4 { 
+    color: #a3ccf8; 
+}
+
+body.dark a {
+    color: #fff;
 }

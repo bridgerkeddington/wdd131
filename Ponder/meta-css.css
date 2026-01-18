@@ -7,6 +7,8 @@ body {
     justify-content: center;
     padding: 40px;
     margin: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* The Main Container */
@@ -64,4 +66,12 @@ p {
 
 .topic {
     margin-bottom: 30px;
+}
+
+/* Dropdown positioning */
+.dropdown-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
 }

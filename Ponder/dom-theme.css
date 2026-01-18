@@ -1,0 +1,34 @@
+body {
+    background-size: cover; /* Ensures image covers the whole screen */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures body is at least as tall as the screen */
+    margin: 0;
+    padding: 20px;
+    transition: background-image 1s ease; /* Makes the image fade smoothly */
+    font-family: sans-serif; /* Default font */
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight see-through white box */
+    border-radius: 10px;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#logo {
+    margin-top: 1rem;
+    width: 300px;
+}
+
+.content {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}

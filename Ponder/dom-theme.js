@@ -1,3 +1,5 @@
+// Cited: Gemini 3 Pro for code generation
+
 // 1. Select the HTML elements
 const selectElem = document.querySelector('#theme-select');
 const pageContent = document.querySelector('body');

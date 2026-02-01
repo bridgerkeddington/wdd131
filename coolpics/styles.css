@@ -1,3 +1,4 @@
+﻿/* Updated by Codex (GPT-5) */
 /* Code generation and fixes by Claude Haiku 4.5 and Gemini 3 Pro */
 
 /* ==================== RESET ==================== */
@@ -109,7 +110,7 @@ body {
 }
 
 /* ==================== IMAGES ==================== */
-img {
+.gallery img {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -118,9 +119,48 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-img:hover {
+.gallery img:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== IMAGE VIEWER (MODAL) ==================== */
+.viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.viewer img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.viewer-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: #fff;
+  color: #111;
+  font-size: 28px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 /* ==================== FIX: FOOTER STYLING ==================== */
@@ -180,3 +220,4 @@ img:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+

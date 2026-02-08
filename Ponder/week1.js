@@ -1,3 +1,4 @@
+// Cited by Codex (OpenAI)
 // Cited: Gemini 3 Pro for code generation
 const PI = 3.14;
 let radius = 3;

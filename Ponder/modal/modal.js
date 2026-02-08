@@ -1,3 +1,4 @@
+// Cited by Codex (OpenAI)
 // Updated by Codex
 const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');

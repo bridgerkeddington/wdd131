@@ -1,3 +1,4 @@
+// Cited by Codex (OpenAI)
 // Updated by Codex
 const menuButton = document.querySelector('.menu-btn');
 const menu = document.querySelector('nav');

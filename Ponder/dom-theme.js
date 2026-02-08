@@ -1,3 +1,4 @@
+// Cited by Codex (OpenAI)
 // Cited: Gemini 3 Pro for code generation
 
 // 1. Select the HTML elements

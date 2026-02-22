@@ -1,0 +1,143 @@
+/* Gemini for styling and grid layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* CSS Grid Implementation for Layout & Overlap */
+.form-grid-container {
+    display: grid;
+    /* Creates 3 columns to allow the cards to offset and overlap */
+    grid-template-columns: 80px 400px 80px;
+    grid-template-rows: auto auto auto;
+}
+
+/* Shared Card Styling */
+.card {
+    background-color: #ccc; /* Matches the light gray from the mockup */
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    height: 280px;
+    box-sizing: border-box;
+}
+
+/* Front Card Placement & Layout */
+.card-front {
+    grid-column: 1 / 3; /* Spans the first and second columns */
+    grid-row: 1 / 3;    /* Spans the first and second rows */
+    z-index: 2;         /* Keeps it in front */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Back Card Placement & Layout */
+.card-back {
+    grid-column: 2 / 4; /* Spans the second and third columns (shifted right) */
+    grid-row: 2 / 4;    /* Spans the second and third rows (shifted down) */
+    z-index: 1;         /* Keeps it behind */
+    position: relative;
+    padding: 0;         /* Reset padding so stripe goes edge-to-edge */
+}
+
+/* --- Typography and Inner Elements --- */
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+label {
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    border: 1px solid #777;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Front Card Specifics */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chip {
+    width: 50px;
+    height: 35px;
+}
+
+.card-front-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.holder-group {
+    flex: 2;
+}
+
+.expiration-group {
+    flex: 1;
+}
+
+.exp-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+/* Back Card Specifics */
+.magnetic-stripe {
+    background-color: #000;
+    height: 55px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.cvv-container {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 90px;
+}
+
+/* Submit Button Placement */
+.submit-btn {
+    grid-column: 3 / 4;
+    grid-row: 4;
+    justify-self: end;
+    margin-top: 20px;
+    padding: 12px 35px;
+    font-size: 18px;
+    background-color: #eee;
+    border: 3px solid #111;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}

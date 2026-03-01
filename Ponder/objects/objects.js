@@ -2,7 +2,6 @@
 const aCourse = {
     code: 'CSE121b',
     name: 'Javascript Language',
-    // path relative to the HTML file in the objects folder
     logo: '../js-logo.png',
     sections: [
     { sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},

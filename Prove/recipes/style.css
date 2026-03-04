@@ -1,0 +1,149 @@
+/* Used Claude to debug and some autofill to speed up writing. I built all the code. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+#logo {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 40px auto;
+}
+#logo img {
+    width: 8vw;
+    height: auto;
+    min-width: 80px;
+}
+
+#logo h1 {
+    font-size: 6vw;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form img {
+    width: 35px;
+    height: auto;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 90%;
+    max-width: 1100px;
+    margin: 1em auto;
+}
+
+.recipe-container {
+    display: flex;
+    border: black solid 2px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 90%;
+    background-color: white;
+    margin: 50px auto;
+}
+
+.recipe-container img {
+    width: 25em;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.recipe-container h2 {
+    font-size: 3em;
+    color: lightskyblue;
+
+}
+
+.recipe-container p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: lightskyblue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px;
+    flex-direction: row-reverse;
+}
+
+.social img {
+    width: 30px;
+    height: auto;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin: 15px;
+}
+
+@media screen and (max-width: 900px) {
+    .recipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .recipe-container img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

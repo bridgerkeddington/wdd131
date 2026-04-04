@@ -71,6 +71,7 @@ nav ul a {
     font-family: 'Inter', sans-serif;
     font-size: 1.7rem;
     transition: color 0.2s;
+    text-decoration: underline;
 }
 
 nav ul a:hover {
@@ -270,6 +271,8 @@ footer a:hover {
     font-size: 2rem;
     width: 50px;
     height: 50px;
+    min-width: 48px;
+    min-height: 48px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -345,6 +348,8 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        min-width: 48px;
+        min-height: 48px;
         background: none;
         border: none;
         cursor: pointer;

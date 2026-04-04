@@ -19,7 +19,7 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--secondary);
     color: var(--accent2);
-    background-image: url('imgs/nebula.webp');
+    background-image: url('imgs/nebula.png');
     background-size: contain;
     background-position: center top;
     background-attachment: scroll;

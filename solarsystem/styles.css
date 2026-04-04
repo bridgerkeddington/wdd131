@@ -19,7 +19,7 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--secondary);
     color: var(--accent2);
-    background-image: url('imgs/nebula.png');
+    background-image: url('imgs/nebula.webp');
     background-size: contain;
     background-position: center top;
     background-attachment: scroll;
@@ -148,10 +148,6 @@ footer {
 
 footer a {
     color: var(--accent1);
-    text-decoration: none;
-}
-
-footer a:hover {
     text-decoration: underline;
 }
 

@@ -1,0 +1,55 @@
+<!-- I used Claude for debugging purposes and syntax, but the code was written mostly by me. I checked for understanding as well. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SolarEd Planet Explorer — an interactive educational journey through our solar system.">
+    <meta author="Bridger Keddington">
+    <title>Planetary Overview</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="planet.js" defer></script>
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="logo">Solar<span id="logo2">Ed</span></h1>
+        <nav>
+            <button id="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="citations.html">Citations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="planet-page">
+        <section id="viewer">
+            <button id="leftArrow" aria-label="Previous planet">←</button>
+            <div id="planet-wrapper">
+                <div id="planet-ball" aria-label="Rotating planet display"></div>
+            </div>
+            <button id="rightArrow" aria-label="Next planet">→</button>
+        </section>
+        <section id="data-panel">
+            <div id="planet-info">
+                <h3 id="planet-name"></h3>
+                <p id="planet-description"></p>
+            </div>
+
+            <ul id="quick-stats">
+
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 SolarEd | WDD131 | <a href="citations.html">Citations</a></p>
+    </footer>
+</body>
+</html>
+

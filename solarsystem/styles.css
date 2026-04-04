@@ -1,0 +1,382 @@
+/* I used Claude for debugging purposes and syntax, but the code was written mostly by me. I checked for understanding as well. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #00010a;
+    --secondary: #000000;
+    --accent1: #fca311;
+    --accent2: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--secondary);
+    color: var(--accent2);
+    background-image: url('imgs/nebula.png');
+    background-size: contain;
+    background-position: center top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent1);
+}
+
+p {
+    color: var(--accent2);
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+}
+
+#logo {
+    color: var(--accent1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+}
+
+#logo2 {
+    color: var(--accent2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    color: var(--accent2);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7rem;
+    transition: color 0.2s;
+}
+
+nav ul a:hover {
+    color: var(--accent1);
+}
+
+#hamburger {
+    display: none;
+}
+
+#hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 15rem;
+    gap: 1.5rem;
+}
+
+#hero h1 {
+    color: var(--accent1);
+    font-size: 3em;
+    max-width: 600px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#hero p {
+    color: var(--accent2);
+    font-size: 1.5em;
+    max-width: 1100px;
+    background: #00000095;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 3.0rem;
+    gap: 1.5rem;
+}
+
+#about h2 {
+    color: var(--accent1);
+    font-size: 2.5em;
+    max-width: 600px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#about p {
+    color: var(--accent2);
+    font-size: 1.25em;
+    max-width: 1100px;
+    background: #00000095;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--accent2);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.85em;
+}
+
+footer a {
+    color: var(--accent1);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+#planet-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background-image: url('imgs/stars.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+#planet-wrapper {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#planet-ball {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-image: url('imgs/earth.jpg');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    box-shadow: inset -30px -20px 50px 2px rgba(0,0,0,0.8),
+                inset 10px 10px 30px rgba(255,255,255,0.2);
+    animation: rotatePlanet 20s linear infinite;
+    z-index: 2;
+}
+
+#data-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 3rem 4rem;
+    gap: 2rem;
+}
+
+#planet-info {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#planet-name {
+    font-size: 2rem;
+    color: var(--accent1);
+}
+
+#planet-description {
+    font-size: 1rem;
+    color: var(--accent2);
+    line-height: 1.8;
+}
+
+#quick-stats {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 220px;
+}
+
+#quick-stats li {
+    color: var(--accent2);
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+    border-left: 3px solid var(--accent1);
+    padding-left: 0.75rem;}
+
+#launch {
+    background: var(--accent1);
+    color: var(--secondary);
+    border: none;
+    padding: .85rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+
+#launch:hover {
+    opacity: 0.7;
+}
+
+#leftArrow, #rightArrow {
+    background-color: var(--accent1);
+    color: var(--secondary);
+    border: none;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    transition: opacity 0.2s;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftArrow:hover, #rightArrow:hover {
+    opacity: 0.7;
+}
+
+@keyframes starSpin {
+    from { transform: rotateZ(0deg);}
+    to { transform: rotateZ(360deg);}
+}
+
+@keyframes rotatePlanet {
+    from {background-position: 0 0;}
+    to {background-position: -700px 0;}
+}
+
+
+
+
+@media (max-width: 1450px) {
+    body {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        background-size: cover;
+        background-position: center top;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.95rem
+    }
+
+    #about h2 {
+        font-size: 1.75rem;
+    }
+
+    #about p {
+        font-size: 0.95rem;
+    }
+
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding:0.5rem;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--accent2);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    #planet-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    #planet-ball {
+        width: 250px;
+        height: 250px;
+    }
+
+    #data-panel {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    @keyframes rotatePlanet {
+        from {background-position: 0 0;}
+        to {background-position: -500px 0;}
+    }
+}

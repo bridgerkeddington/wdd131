@@ -279,6 +279,7 @@ footer a:hover {
     transition: opacity 0.2s;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 #leftArrow:hover, #rightArrow:hover {
@@ -373,6 +374,11 @@ footer a:hover {
     #planet-ball {
         width: 250px;
         height: 250px;
+    }
+
+    #viewer {
+        gap: 1rem;
+        padding: 2rem 0.5rem;
     }
 
     #data-panel {
